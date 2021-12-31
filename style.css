@@ -1,0 +1,12 @@
+body {
+    background-color: #eee;
+}
+.container {
+    width: 38vw;
+    background-color: rgba(110, 90, 87, 0.671);
+    padding: 20px;
+    border-radius: 10px;
+}
+.p2 {
+    margin-top: -20px;
+}
