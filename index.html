@@ -26,22 +26,17 @@
 		</div>
 
 		<script>
-			const scriptURL = "https://script.google.com/macros/s/AKfycbzQLivfU0GtdgimVBxP7_aob3o2w2kz_Ei0II2ZOuY8O-G5kAZuibBbLf55MCPAEDwS/exec";
+			const scriptURL = "https://script.google.com/macros/s/AKfycbw86pOo0psVPYiIHU6y4IaZaLXOOZqLSgSMTUtHwvalH4RAGR5iV0xiaM8LynzJaqs/exec";
 			const form = document.forms["submit-form"];
-
-			// const submitButton = document.querySelector('.btn-kirim');
-			// const loadingButton = document.querySelector('.btn-loading');
 
 			form.addEventListener("submit", (e) => {
 				e.preventDefault();
-				// submitButton.classList.toggle('d-none');
-				// loadingButton.classList.toggle('d-none');
-
-				fetch(scriptURL, { method: "POST", body: new FormData(form) })
+				fetch(scriptURL, {
+					method: "POST",
+					body: new FormData(form),
+				})
 					.then((response) => {
 						console.log("Success!", response);
-						// submitButton.classList.toggle('d-none');
-						// loadingButton.classList.toggle('d-none');
 						alert("Thank you udah isi :D have a great day!");
 						form.reset();
 					})
